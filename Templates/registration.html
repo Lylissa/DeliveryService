@@ -1,0 +1,73 @@
+{% load static %}
+
+{% block content %}
+
+	<title>Register</title>
+	<link rel="shortcut icon" type="image/png/jpg" href="{% static 'mysite/favicon/favicon.png '%}">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/registrations.css' %}"/>
+<!-- Navigation Bar -->
+	<nav id="image" class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/login">
+          <img class="images" src="{% static 'mysite/images/finallogos.png' %}">
+        </a>
+	</nav>
+<!-- end nav -->
+  <img id="img" src="{% static 'mysite/images/backs.jfif' %}">
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-justify-content-left lefts">
+					<h3 id="form-title">REGISTER ACCOUNT</h3>
+				</div>
+				<p class="signs">Sign up or log in to continue</p>
+				<div class="d-flex justify-content-center form_container">
+
+					<form method="POST" action="">
+						{% csrf_token %}
+						<div id="mbs" class="input-group mb-3">
+							{{form.username}}
+						</div>
+						<div class="input-group mb-2">
+							{{form.email}}
+						</div>
+						<div class="input-group mb-2">
+							{{form.password1}}
+						</div>
+						<div class="input-group mb-2">
+							{{form.password2}}
+						</div>
+				   	<div class="d-flex justify-content-center mt-3 login_container">
+				 			<input class="btn login_btn" type="submit" value="REGISTER ACCOUNT">
+				   	</div>
+
+					</form>
+				</div>
+				{{form.errors}}
+				<div class="mt-4">
+					<div class="d-flex justify-content-center linkss">
+						Already have an account?<a href="/login" class="ml-2" id="mls">LOGIN</a>
+					</div>
+					<p class="f">By signing up, you agree to our<a href="/terms" target="_blank" class="ml-2" id="mlss"><b>Terms and Conditions</b></a> &#160;&#160;&#160;&#160;&#160;and<a href="/privacy" target="_blank" class="ml-2" id="mlss"><b>Privacy Policy</b></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		//Query All input fields
+		var form_fields = document.getElementsByTagName('input')
+		form_fields[1].placeholder='Username..';
+		form_fields[2].placeholder='Email..';
+		form_fields[3].placeholder='Enter password...';
+		form_fields[4].placeholder='Re-enter Password...';
+		for (var field in form_fields){	
+			form_fields[field].className += ' form-control'
+		}
+	</script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+{% endblock content %}

@@ -1,0 +1,402 @@
+{% load static %}
+
+{% block headerinclude %}
+
+<style>
+      body{
+        overflow-x: hidden;
+        font-family: "Open Sans", Arial, sans-serif;
+      }
+      #image{
+          position: fixed;
+          width: 100%;
+          height: 75px;
+          z-index: 999;
+          background-color: #0000;
+      }
+      #image.scrolled{
+        background: #ffffff !important;
+      }
+      .con{
+          float: none;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-weight: bold;
+          font-family: Verdana;
+      }
+      .right{
+          float: none;
+          position: absolute;
+          top: 50%;
+          left: 90%;
+          transform: translate(-50%, -50%);
+          font-weight: bold;
+          font-family: Verdana;
+      }
+      .button{
+          padding: 10px 10px;
+          color: white;
+          text-align: center;
+          border: none;
+      }
+      .button1{
+          width: 150px;
+          color:#d92929 !important;
+          border-color:#d92929 !important;
+          font-weight: bold !important;
+          font-family: Verdana;
+      }
+      .wrapper {
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          margin: 0 auto;
+          height: 100%;
+      }
+
+      #img{
+          width: 100%;
+          height: 800px;
+          opacity: 0.6;
+      }
+      body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.cont {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 200px;
+}
+
+/* FOOTER */
+      .footer {
+        width: 100%;
+        position: relative;
+        height: auto;
+        background-color: #ffffff;
+        border-radius: 0px;
+        font-size: 14px;
+        font-family: Tahoma;
+        color: gray;
+      }
+      .footer .col {
+        width: 190px;
+        height: auto;
+        float: left;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        padding: 0px 20px 20px 20px;
+
+      }
+      .footer .col ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+      }
+   
+      .social ul li {
+        display: inline-block;
+        padding-right: 5px !important;
+      }
+
+      .footer ul li:hover {
+        color: darkred;
+        transition: .1s;
+        -webkit-transition: .1s;
+        -moz-transition: .1s;
+        cursor: pointer;
+      }
+
+      @media only screen and (min-width: 1280px) {
+        .contain {
+          width: 1200px;
+          margin: 0 auto;
+          margin-right: 20%;
+        }
+      }
+       @media only screen and (min-width: 1280px) {
+        .contain1 {
+          width: 1200px;
+          margin: 0 auto;
+          margin-left: 80%;
+        }
+      }
+      .grayscale{
+          margin-left: 5%; 
+          filter: grayscale(100%);
+      }
+      ul#menu li{
+        display: inline;
+      }
+      ul.align{
+        margin-top:-40px; 
+        margin-left: 65%;
+      }
+
+  .contact_form_wrapper
+  {
+  margin-top:-500px;
+  margin-bottom: 10em;
+  }
+  .contact_form
+  {
+  background:#fff;
+  border-radius:4px;
+  box-shadow: rgba(42,45,54,.075) 0 12px 34px, rgba(0,0,0,.05) 0 6px 15px, inset transparent 0 0 0 0;
+  margin:0 auto 0 auto;
+  max-width:850px;
+  padding:50px;
+  }
+  .contact_form .form-control
+  {
+  border-color:#dcdcdc;
+  color:#777;
+  padding:8px;
+  }
+  .contact_form input[type=text]:focus,
+  .contact_form input[type=email]:focus,
+  .contact_form textarea:focus
+  {
+  box-shadow:inset 0 0 3px #f0f0f0;
+  border:1px solid #bbb;
+  }
+  
+  .contact_form textarea 
+  {
+  min-height:120px;
+  }
+  .form-control::-webkit-input-placeholder { color: #888; }  
+  .form-control:-moz-placeholder { color: #888;; }  
+  .form-control::-moz-placeholder { color: #888;; }  
+  .form-control:-ms-input-placeholder { color: #888;; } 
+  .form-control::-ms-input-placeholder { color: #888;; }
+  
+  @media screen and (max-width:767px)
+  {
+  .contact_header 
+  {
+  padding: 50px 40px 150px 40px;
+  }
+  .contact_header h1 
+  {
+  font-size:28px;
+  }
+    .contact_form
+    {
+    padding:25px;
+    }
+  }
+
+</style>
+
+{% endblock headerinclude %}
+
+{% block content %}
+
+    <title>Contact Us | ClickToEat</title>
+    <link rel="shortcut icon" type="image/png/jpg" href="{% static 'mysite/favicon/favicon.png '%}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"> 
+
+<!-- Navigation Bar -->
+    <nav id="image" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="/home">
+          <img src="{% static 'mysite/images/finallogos.png' %}" width="200" height="50" style="margin-left: 10%;">
+        </a>
+    <div class="con">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+      </div>
+    </div>
+      <div class="right">
+       <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a type="button" class="button button1" id="id_clickme" href="{% url 'dashboardpage'%}">DASHBOARD</a></button>
+        </li>
+      </ul>
+    </div>
+</nav>
+
+<!-- End Navigation Bar -->
+
+  <div class="wrapper">
+      <img id="img" src="{% static 'mysite/images/FoodApps.jpg.crdownload' %}">
+    <div class="content">
+    </div>
+  </div>
+<div class="contact_form_wrapper container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="contact_form">
+        <div class="row">
+          <div class="col-12 col-sm-6">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" class="form-control" placeholder="Enter Name">
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+          <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Enter Email">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12 col-sm-6">
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="text" class="form-control" placeholder="Enter Phone">
+            </div>
+          </div>
+          <div class="col-12 col-sm-6">
+            <div class="form-group">
+              <label>City</label>
+              <input type="text" class="form-control" placeholder="Enter City">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" class="form-control" placeholder="Enter Subject">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label>Message</label>
+              <textarea class="form-control">
+              </textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center mt-2">
+          <div class="col-sm-12">
+            <button class="btn btn-md btn-primary">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+        });
+    </script>
+
+{% endblock content %}    
+
+{% block footerinclude %}
+    <!-- Footer -->
+<hr>
+<div class="footer">
+<div style="padding: 20px;">
+  <img src="{% static 'mysite/images/finallogos.png' %}" width="150" height="40" class="grayscale">
+  <div class="contain1">
+  <div class="col social">
+    <ul style="margin-top:-35px;" class="grayscale">
+      <li><img src="{% static 'mysite/images/facebook.png' %}" alt="Snow" style="width: 27px"></li>
+      <li><img src="{% static 'mysite/images/instagram.png' %}" alt="Snow" style="width: 27px"></li>
+      <li><img src="{% static 'mysite/images/twitter.png' %}" alt="Snow" style="width: 27px"></li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+<hr>
+<div class="footer">
+<div style="padding: 20px; margin-left: 5%;">
+  &copy; 2021-2022  Click To Eat
+  <p style="font-family:Tahoma; font-size: 14px; margin-left: -26px;">Designed by Cueva, Aarold Paul & Orcullo, Mary Alissa</p>
+    <div class="contain">
+  <div class="col">
+  </div>
+  <div class="col">
+  </div>
+  <div class="col">
+  </div>
+  <div class="col">
+  </div>
+  <div class="">
+    <ul class="align" id="menu">
+      <li><a style="text-decoration: none; color:#989898;" href="/about">About</a></li>
+      <li><a style="text-decoration: none; color:#989898;" href="/contact">Contact</a></li>
+      <li><a style="text-decoration: none; color:#989898;" href="/terms">Terms and Conditions</a></li>
+      <li><a style="text-decoration: none; color:#989898;" href="/privacy">Privacy Policy</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+    <!-- // Footer -->    
+
+{% endblock footerinclude %}               
+
+

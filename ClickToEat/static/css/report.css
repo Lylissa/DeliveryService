@@ -1,0 +1,96 @@
+       #image{
+          position: fixed;
+          margin-top: -50px;
+          width: 100%;
+          height: 75px;
+          z-index: 999;
+          background-color: #ffffff;
+      }
+      .images{
+         width: 100%; 
+         height: 45px;
+         margin-left: 10%; 
+         margin-top: -4px;
+      }
+      #navs{
+        margin-left: 95%; 
+        margin-top: 10px;
+      }
+      #crs{
+        margin-top: 20px;
+      }
+      .dash{
+        margin-top: 40px;
+      }
+      #btns{
+        margin-left: 69%; 
+        color: #d92929 !important; 
+        border-color: #d92929 !important; 
+        background:white; 
+        font-weight: bold !important;
+      }
+      #btnss{
+        color: #d92929 !important; 
+        border-color: #d92929 !important; 
+        background:white; 
+        font-weight: bold !important;
+      }
+      .sqr{
+        width: 100%;
+      }
+      /* Modal styles */
+       .modal .modal-dialog {
+        max-width: 400px;
+       }
+        .modal .modal-dialog1 {
+        margin-top: 150px;
+        max-width: 200px;
+        margin-right: 70%;
+       }
+       .modal .modal-header, .modal .modal-body, .modal .modal-footer {
+        padding: 20px 30px;
+       }
+       .modal .modal-content {
+        border-radius: 10px;
+       }
+       .modal .modal-footer {
+        background: #ecf0f1;
+        border-radius: 0 0 1px 1px;
+       }
+        .modal .modal-title {
+            display: inline-block;
+          }
+       .modal .form-control {
+        border-radius: 1px;
+        box-shadow: none;
+        border-color: #dddddd;
+       }
+       .modal textarea.form-control {
+        resize: vertical;
+       }
+       .modal .btn {
+        border-radius: 1px;
+        min-width: 100px;
+       } 
+       .modal form label {
+        font-weight: normal;
+       }
+       .fades{
+          margin-left: 560px;
+       }
+       .cnts{
+        margin-left: 20%;
+       }
+       .tts{
+          margin-left: 3px;
+       }
+       #bttns{
+         margin-left: -10px;
+       }
+       #suc{
+        margin-left: 1%; 
+        color: #d92929 !important; 
+        border-color: #d92929 !important; 
+        background:white; 
+        font-weight: bold !important;
+       }

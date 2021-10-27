@@ -1,0 +1,349 @@
+{% load static %}
+
+{% block headerinclude %}
+
+<style>
+      body{
+        overflow-x: hidden;
+        font-family: 'Averia Serif Libre';
+        background-image: url("static/mysite/images/FoodApps.jpg.crdownload");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+/* nav */
+      #image{
+          position: fixed;
+          width: 100%;
+          height: 75px;
+          z-index: 999;
+          background-color: #ffffff;
+          margin-top: -2px;
+      }
+      #image.scrolled{
+          background: #ffffff !important;
+      }
+/* category 1 */
+      .wrapper{
+          position: relative;
+          display: inline-block;
+          width: 100%;
+          margin: 0 auto;
+          height: 100%;
+      }
+      .user_card{
+          width: 90%;
+          height: 750px;
+          margin-left: 60%;
+          margin-top: -200px;
+          margin-bottom: auto;
+          background: #ffffff;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+        
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          border-radius: 5px;
+      }
+      .login_btn {
+          width: 90%;
+          margin-right: 1em;
+          margin-left: 2em;
+          color: #d92929 !important;
+          border-color: #d92929 !important;
+          font-weight: bold !important;
+      }
+      .login_btn:focus {
+          box-shadow: none !important;
+          outline: 0px !important;
+      }
+      .input-group-text {
+          background: #f7ba5b !important;
+          color: white !important;
+          border: 0 !important;
+          border-radius: 0.25rem 0 0 0.25rem !important;
+          width: 100px;
+      }
+      .input_user,
+      .input_pass:focus {
+          box-shadow: none !important;
+          outline: 0px !important;
+          width: 400px;
+      }
+      #messages{
+          background-color: grey;
+          color: #fff;
+          padding: 10px;
+          margin-top: 10px;
+      }
+      .field{
+          border: 1px solid #ddd !important;
+          height: 50px;
+          margin-left: 2em;
+          margin-right: 2em;
+          width: 400px;
+          padding: 10px;       
+          position: relative;
+          border-radius:4px;
+          background-color:#ffffff;
+          padding-left:20px!important;
+          margin-top: 15px;
+      } 
+  
+      legend{
+          font-size:11px;
+          width: 50%;
+          padding: 5px 5px 0px 0px; 
+          background-color: #ffffff;
+          margin-top: -20px;
+          border-bottom: transparent;
+      }
+      .part{
+          margin-top: 250px;
+          margin-left: 10%;
+          font-weight: bolder;
+          color: black;
+          font-family:  Arial Black;
+          font-size: 50px;
+          opacity: 1.0;
+      }
+/* FOOTER */
+      .footer {
+          width: 100%;
+          position: relative;
+          margin-bottom: 0px;
+          margin-top: 100%;
+          height: auto;
+          background-color: #ffffff;
+          border-radius: 0px;
+          font-size: 14px;
+          font-family: Tahoma;
+          color: gray;
+      }
+      .footer .col {
+          width: 190px;
+          height: auto;
+          float: left;
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          padding: 0px 20px 20px 20px;
+
+      }
+      .footer .col ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          font-weight: normal;
+      }
+   
+      .social ul li {
+          display: inline-block;
+          padding-right: 5px !important;
+      }
+      .footer ul li:hover {
+          color: darkred;
+          transition: .1s;
+          -webkit-transition: .1s;
+          -moz-transition: .1s;
+          cursor: pointer;
+      }
+
+      @media only screen and (min-width: 1280px) {
+        .contain {
+          width: 1200px;
+          margin: 0 auto;
+          margin-right: 20%;
+        }
+      }
+       @media only screen and (min-width: 1280px) {
+        .contain1 {
+          width: 1200px;
+          margin: 0 auto;
+          margin-left: 80%;
+        }
+      }
+      .grayscale{
+          margin-left: 5%; 
+          filter: grayscale(100%);
+      }
+      ul#menu li{
+        display: inline;
+      }
+      ul.align{
+        margin-top:-40px; 
+        margin-left: 65%;
+      }
+</style>
+
+{% endblock headerinclude %}
+
+{% block content %}
+
+   <title>Partner with ClickToEat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- Navigation Bar -->
+    <nav id="image" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="/home">
+          <img src="{% static 'mysite/images/finallogos.png' %}" width="200" height="50" style="margin-left: 10%; margin-top: -15px;">
+        </a>
+    </nav>
+<!-- End Navigation Bar -->
+
+    <div class="wrapper">
+      <h3 class="part">PARTNER WITH US</h3>
+      <p></p>
+    <div class="container h-100">
+        <div class="d-flex justify-content-center h-100">
+          <div class="user_card">
+        <div class="d-justify-content-left" style="text-indent: 1.5em; font-family: Arial Black; width: 100%;  margin-top: -10px;">
+          <h3 style="font-size: 18px; text-align:center; margin-right:1em; margin-left:1em;">Interested? Fill in the form below to become our partner and increase your revenue!</h3>
+        </div>
+          <form method="POST" action="">
+            {% csrf_token %}
+            <fieldset class="field">     
+              <legend style="width:23%; font-size:12px; border-bottom: transparent;">Business Name</legend>
+                <input type="text" name="Name" placeholder="" style="width:100%; height:30px;margin-top:-17px; border: none transparent; outline: none;" required>
+            </fieldset>
+          </br>
+          <div></div>
+            <fieldset class="field" style="margin-top:10px;">     
+              <legend style="width:23%; font-size:12px; border-bottom: transparent;">Business Type</legend>
+                 <select name="Make" id="Make" style="margin-left:-5px; outline: 0px; border: 0px; width: 100%; height: 30px;margin-top: -15px;" required>
+                      <option value="" disabled selected>--None--</option>
+                      <option value="Shop">Shop</option>
+                      <option value="Restaurant">Restaurant</option>
+                  </select>
+            </fieldset> 
+            </br>
+          <div></div>
+            <fieldset class="field" style="margin-top:10px;">     
+              <legend style="width:53%; font-size:12px; border-bottom: transparent;">Average cost of meal for one person</legend>
+                 <select name="Make" id="Make" style="margin-left:-5px; outline: 0px; border: 0px; width: 100%; height: 30px;margin-top: -15px;" required>
+                      <option value="" disabled selected>--None--</option>
+                      <option value="$">$</option>
+                      <option value="$$">$$</option>
+                      <option value="$$$">$$$</option>
+                  </select>
+            </fieldset>
+             </br>
+          <div></div>
+            <fieldset class="field" style="margin-top:10px;">     
+              <legend style="width:19%; font-size:12px; border-bottom: transparent;">Given Name</legend>
+                <input type="text" name="Name" placeholder="" style="width:100%; height:30px;margin-top:-17px; border: none transparent; outline: none;" required>
+            </fieldset>
+             </br>
+          <div></div>
+            <fieldset class="field" style="margin-top:10px;">     
+              <legend style="width:20%; font-size:12px; border-bottom: transparent;">Family Name</legend>
+                <input type="text" name="Name" placeholder="" style="width:100%; height:30px;margin-top:-17px; border: none transparent; outline: none;" required>
+            </fieldset>
+            </br>
+          <div></div>
+            <fieldset class="field" style="margin-top:10px;">     
+              <legend style="width:25%; font-size:12px; border-bottom: transparent;">Contact Number</legend>
+                <input type="tel" name="Name" placeholder="+63123456789" style="width:100%; height:30px;margin-top:-17px; border: none transparent; outline: none;" pattern="(\+63)[0-9]{8,10}" required>
+            </fieldset> 
+            </br>
+          <div></div>
+            <fieldset class="field" style="margin-top:10px;">     
+              <legend style="width:8%; font-size:12px; border-bottom: transparent;">Email</legend>
+                <input type="text" inputmode="email" placeholder="name@gmail.com" style="width:100%; height:30px;margin-top:-17px; border: none transparent; outline: none;" pattern="^[a-zA-Z0-9!#$%'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$" required>
+            </fieldset>
+          </br>
+          <div></div>
+            <div class="d-flex justify-content-center mt-3 login_container">
+                <input class="btn login_btn" type="submit" value="SUBMIT">
+                </div>          
+          </form>
+        </div>       
+          </form>
+        </div>
+        {% for message in messages %}
+          <p id="messages">{{message}}</p>
+        {% endfor %}      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>  
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+        });
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+
+{% endblock content %}    
+
+{% block footerinclude %}
+    <!-- Footer -->
+<div class="footer">
+  <hr>
+<div style="padding: 20px;">
+  <img src="{% static 'mysite/images/finallogos.png' %}" width="150" height="40" class="grayscale">
+  <div class="contain1">
+  <div class="col social">
+    <ul style="margin-top:-35px;" class="grayscale">
+      <li><img src="{% static 'mysite/images/facebook.png' %}" alt="Snow" style="width: 27px"></li>
+      <li><img src="{% static 'mysite/images/instagram.png' %}" alt="Snow" style="width: 27px"></li>
+      <li><img src="{% static 'mysite/images/twitter.png' %}" alt="Snow" style="width: 27px"></li>
+    </ul>
+  </div>
+</div>
+</div>
+<hr>
+<div style="padding: 20px; margin-left: 5%;">
+  &copy; 2021-2022  Click To Eat
+  <p style="font-family:Tahoma; font-size: 14px; margin-left: -26px;">Designed by Cueva, Aarold Paul & Orcullo, Mary Alissa</p>
+    <div class="contain">
+  <div class="col">
+  </div>
+  <div class="col">
+  </div>
+  <div class="col">
+  </div>
+  <div class="col">
+  </div>
+  <div class="">
+    <ul class="align" id="menu">
+      <li><a style="text-decoration: none; color:#989898;" href="/about">About</a></li>
+      <li><a style="text-decoration: none; color:#989898;" href="/contact">Contact</a></li>
+      <li><a style="text-decoration: none; color:#989898;" href="/terms">Terms and Conditions</a></li>
+      <li><a style="text-decoration: none; color:#989898;" href="/privacy">Privacy Policy</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+    <!-- // Footer -->    
+
+{% endblock footerinclude %}               
+
+

@@ -1,0 +1,745 @@
+{% load static %} 
+{% block content%}
+    <title>Dashboard | ClickToEat</title>
+    <link rel="shortcut icon" type="image/png/jpg" href="{% static 'mysite/favicon/favicon.png '%}">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap5.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/report.css' %}"/> 
+
+    <!-- top navigation bar -->
+    <nav id="image" class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/home">
+          <img class="images" src="{% static 'mysite/images/finallogos.png' %}">
+        </a>
+        <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="topNavBar">
+          <ul class="navbar-nav" id="navs">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-person-fill"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
+      <div class="offcanvas-body p-0">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3" id="crs">
+                CORE
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                Interface
+              </div>
+            </li>
+            <li>
+              <a
+                class="nav-link px-3 sidebar-link"
+                data-bs-toggle="collapse"
+                href="#layouts">
+                <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                <span>Layouts</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="layouts">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Dashboard</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-book-fill"></i></span>
+                <span>Pages</span>
+              </a>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-light" /></li>
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                Addons
+              </div>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-graph-up"></i></span>
+                <span>Charts</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-table"></i></span>
+                <span>Tables</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="dash">Dashboard</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+            <div class="card bg-primary text-white h-100">
+              <div class="card-body py-5">Primary Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-warning text-dark h-100">
+              <div class="card-body py-5">Warning Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-success text-white h-100">
+              <div class="card-body py-5">Success Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="card bg-danger text-white h-100">
+              <div class="card-body py-5">Danger Card</div>
+              <div class="card-footer d-flex">
+                View Details
+                <span class="ms-auto">
+                  <i class="bi bi-chevron-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-header">
+                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+                Client Chart
+              </div>
+              <div class="card-body">
+                <canvas class="chart" width="400" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-header">
+                <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+                Order
+              </div>
+              <div class="card-body">
+                <canvas class="chart" width="400" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <div class="card">
+              <div class="card-header">
+                <span><i class="bi bi-table me-2"></i></span>Data Table
+                <a href="#addModal" class="btn btn-success" data-toggle="modal" id="btns"><i class="material-icons">&#xe147;</i> <span>Add Data</span></a>
+                <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal" id="btnss"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>  
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <div>
+                    <p><h5>CLIENT</h5></p>
+                  </div>
+                  <table id="example" class="table table-striped data-table sqr" >
+                    <thead>
+                      <tr>
+                        <th>
+                       <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                       </span>
+                      </th>
+                        <th>FIRSTNAME</th>
+                        <th>LASTNAME</th>
+                        <th>CITY</th>
+                        <th>PHONE NUMBER</th>
+                        <th>EMAIL</th>
+                        <th>ACTIONS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for client in clients %}
+                      <tr>
+                        <th>
+                       <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                       </span>
+                      </th>
+                        <td>{{client.Firstname}}</td>
+                        <td>{{client.Lastname}}</td>
+                        <td>{{client.City}}</td>
+                        <td>{{client.Phone_Number}}</td>
+                        <td>{{client.Email}}</td>
+                         <td>
+                          <a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#ClientUpdateModal-{{client.id}}" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:50px;">VIEW</a>
+                          <button type="button" class="btn btn-primary dells" data-toggle="modal" data-target="#ClientDeleteModal-{{client.id}}" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:50px;">DELETE</button>
+                        </td>
+                      </tr>
+                      <!-- Modal VIEW-->
+                  <div class="modal fade" id="ClientUpdateModal-{{client.id}}" tabindex="-1" role="dialog" aria-labelledby="newModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+
+                      <div class="modal-content" style="width:500px;">
+                        <div class="modal-header" style="background-color:#d92929 !important;">
+                          <h5 class="modal-title" style="text-indent:center; margin-left: 80px; font-weight:bolder;:">VIEW DETAILS</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="margin-left: 600%;">&times;</span>
+                          </button>
+                        </div>
+                        <form id="updateForm" method="post">
+                        {% csrf_token %}
+                        <div class="modal-body">
+                          <input type="text" name="cclient-id" value = {{client.id}} hidden>
+                          <div class="row">
+                            <div class="col-12" id="startup-tab-1">
+                                <div class = "row" style="margin-bottom:10px;">
+                                  <div class = "col-sm-6">
+                                    <input type="text" class="form-control" id="id-firstname" placeholder="Firstname" name="client-fname" value ="{{client.Firstname}}">
+                                  </div>
+                                  <div class = "col-sm-6">
+                                    <input type="text" class="form-control" id="id-lastname" placeholder="Lastname"  name="client-lname" value ="{{client.Lastname}}">
+                                  </div>
+                                </div>
+                                <div class = "row" style="margin-bottom:10px;">
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-hnumber" placeholder="House Number"  name="client-hnumber" value ="{{client.House_number}}">
+                                </div>
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-barangay" placeholder="Barangay"  name="client-barangay" value ="{{client.Barangay}}">
+                                </div>
+                              </div>
+                              <div class = "row" style="margin-bottom:10px;">
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-municipality" placeholder="Municipality"  name="client-municipality" value ="{{client.Municipality}}">
+                                </div>
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-province" placeholder="Province"  name="client-province" value ="{{client.Province}}">
+                                </div>
+                              </div>
+                              <div class = "row" style="margin-bottom:10px;">
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-city" placeholder="City"  name="client-city" value ="{{client.City}}">
+                                </div>
+                                <div class = "col-sm-6">
+                                  <input type="tel" class="form-control" id="id-pnumber" placeholder="Phone Number"  name="client-pnumber" value ={{client.Phone_Number}}>
+                                </div>
+                              </div>
+                              <div class = "row" style="margin-bottom:10px;">
+                                <div class = "col-sm-12">
+                                  <input type="email" class="form-control" id="id-email" placeholder="Email"  name="client-email" value ={{client.Email}}>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">  
+                            <button type="submit" id = "btnUpdate" name = "btnUpdate" class="button" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:60px;">UPDATE</button>     
+                            <button type="button" class="button btn-secondary" data-dismiss="modal" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:60px;">CLOSE</button>                          
+                        </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                      <!-- Modal DELETE-->
+                  <div class="modal fade" id="ClientDeleteModal-{{client.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">DELETE RECORD</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form id="deleteForm" method="post" >
+                        {% csrf_token %} 
+                        <div class="modal-body">                       
+                          <input type="text" name="cclient-id" value = {{client.id}} hidden>
+                          Are you sure you want to delete this record?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                          <button type="submit" id = "btnDelete" name = "btnDelete" class="btn btn-primary">YES</button>
+                        </div>
+                    </form>
+                    </div>
+                  </div>
+              </div>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                    <div>
+                    <p><h5>ORDER</h5></p>
+                  </div>
+                  <table id="example" class="table table-striped data-table sqr">
+                    <thead>
+                      <tr>
+                        <th>
+                       <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                       </span>
+                      </th>
+                        <th>ORDER DESCRIPTION</th>
+                        <th>ORDER TYPE</th>
+                        <th>HOUSE NUMBER</th>
+                        <th>QUANTITY</th>
+                        <th>ACTIONS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for order in orders %}
+                      <tr>
+                        <th>
+                       <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                       </span>
+                      </th>
+                        <td>{{order.Order_Description}}</td>
+                        <td>{{order.Order_Type}}</td>
+                        <td>{{order.House_number}}</td>
+                        <td>{{order.Quantity}}</td>
+                         <td>
+                           <a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#OrderUpdateModal-{{order.id}}" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:50px;">VIEW</a>
+                          <button type="button" class="btn btn-primary dells" data-toggle="modal" data-target="#OrderDeleteModal-{{order.id}}" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:50px;">DELETE</button>
+                        </td>
+                      </tr>
+                       <!-- Modal VIEW-->
+                  <div class="modal fade" id="OrderUpdateModal-{{order.id}}" tabindex="-1" role="dialog" aria-labelledby="newModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+
+                      <div class="modal-content" style="width:500px;">
+                        <div class="modal-header" style="background-color:#d92929 !important;">
+                          <h5 class="modal-title" style="text-indent:center; margin-left: 80px; font-weight:bolder;:">VIEW DETAILS</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="margin-left: 600%;">&times;</span>
+                          </button>
+                        </div>
+                        <form id="updateForm" method="post">
+                        {% csrf_token %}
+                        <div class="modal-body">
+                          <input type="text" name="oorder-id" value = {{order.id}} hidden>
+                          <div class="row">
+                            <div class="col-12" id="startup-tab-1">
+                                <div class = "row" style="margin-bottom:10px;">
+                                  <div class = "col-sm-6">
+                                    <input type="text" class="form-control" id="id-desc" placeholder="Order Description" name="order-desc" value ="{{order.Order_Description}}">
+                                  </div>
+                                  <div class = "col-sm-6">
+                                    <input type="text" class="form-control" id="id-type" placeholder="Order Type"  name="order-type" value ="{{order.Order_Type}}">
+                                  </div>
+                                </div>
+                                <div class = "row" style="margin-bottom:10px;">
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-hnumber" placeholder="House Number"  name="order-hnumber" value ="{{order.House_number}}">
+                                </div>
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-quan" placeholder="Quantity"  name="order-quantity" value ="{{order.Quantity}}">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">  
+                            <button type="submit" id = "btnOrderUpdate" name = "btnOrderUpdate" class="button" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:60px;">UPDATE</button>     
+                            <button type="button" class="button btn-secondary" data-dismiss="modal" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:60px;">CLOSE</button>                          
+                        </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                      <!-- Modal DELETE-->
+                  <div class="modal fade" id="OrderDeleteModal-{{order.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">DELETE RECORD</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form id="deleteForm" method="post" >
+                        {% csrf_token %} 
+                        <div class="modal-body">                       
+                          <input type="text" name="oorder-id" value = {{order.id}} hidden>
+                          Are you sure you want to delete this record?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                          <button type="submit" id = "btnOrderDelete" name = "btnOrderDelete" class="btn btn-primary">YES</button>
+                        </div>
+                    </form>
+                    </div>
+                  </div>
+              </div>
+                      {% endfor %}
+                    </tbody>    
+                  </table>
+                  <div>
+                  <p><h5>RIDER</h5></p>
+                </div>
+                <table id="example" class="table table-striped data-table sqr">
+                  <thead>
+                    <tr>
+                      <th>
+                       <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                       </span>
+                      </th>
+                      <th>FIRSTNAME</th>
+                      <th>LASTNAME</th>
+                      <th>PHONE NUMBER</th>
+                      <th>PLATE NUMBER</th>
+                      <th>MAKE</th>
+                      <th>ACTIONS</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for rider in riders %}
+                    <tr>
+                      <th>
+                       <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                       </span>
+                      </th>
+                      <td>{{rider.Firstname}}</td>
+                      <td>{{rider.Lastname}}</td>
+                      <td>{{rider.Phone_Number}}</td>
+                      <td>{{rider.Plate_Number}}</td>
+                      <td>{{rider.Make}}</td>
+                       <td>
+                            <a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#RiderUpdateModal-{{rider.id}}" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:50px;">VIEW</a>
+                          <button type="button" class="btn btn-primary dells" data-toggle="modal" data-target="#RiderDeleteModal-{{rider.id}}" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:50px;">DELETE</button>
+                        </td>
+                    </tr>
+                  <!-- Modal VIEW-->
+                  <div class="modal fade" id="RiderUpdateModal-{{rider.id}}" tabindex="-1" role="dialog" aria-labelledby="newModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+
+                      <div class="modal-content" style="width:500px;">
+                        <div class="modal-header" style="background-color:#d92929 !important;">
+                          <h5 class="modal-title" style="text-indent:center; margin-left: 80px; font-weight:bolder;:">VIEW DETAILS</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="margin-left: 600%;">&times;</span>
+                          </button>
+                        </div>
+                        <form id="updateForm" method="post">
+                        {% csrf_token %}
+                        <div class="modal-body">
+                          <input type="text" name="rrider-id" value = {{rider.id}} hidden>
+                          <div class="row">
+                            <div class="col-12" id="startup-tab-1">
+                                <div class = "row" style="margin-bottom:10px;">
+                                  <div class = "col-sm-6">
+                                    <input type="text" class="form-control" id="id-fname" placeholder="Firstname" name="rider-fname" value ="{{rider.Firstname}}">
+                                  </div>
+                                  <div class = "col-sm-6">
+                                    <input type="text" class="form-control" id="id-lname" placeholder="Lastname"  name="rider-lname" value ="{{rider.Lastname}}">
+                                  </div>
+                                </div>
+                                <div class = "row" style="margin-bottom:10px;">
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-pnumber" placeholder="Phone Number"  name="rider-pnumber" value ="{{rider.Phone_Number}}">
+                                </div>
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-plnumber" placeholder="Plate Number"  name="rider-plnumber" value ="{{rider.Plate_Number}}">
+                                </div>
+                              </div>
+                              <div class = "row" style="margin-bottom:10px;">
+                                <div class = "col-sm-6">
+                                  <input type="text" class="form-control" id="id-make" placeholder="Make"  name="rider-make" value ="{{rider.Make}}">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">  
+                            <button type="submit" id = "btnRiderUpdate" name = "btnRiderUpdate" class="button" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:60px;">UPDATE</button>     
+                            <button type="button" class="button btn-secondary" data-dismiss="modal" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:60px;">CLOSE</button>                          
+                        </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                      <!-- Modal DELETE-->
+                  <div class="modal fade" id="RiderDeleteModal-{{rider.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">DELETE RECORD</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form id="deleteForm" method="post" >
+                        {% csrf_token %} 
+                        <div class="modal-body">                       
+                          <input type="text" name="rrider-id" value = {{rider.id}} hidden>
+                          Are you sure you want to delete this record?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                          <button type="submit" id = "btnRiderDelete" name = "btnRiderDelete" class="btn btn-primary">YES</button>
+                        </div>
+                    </form>
+                    </div>
+                  </div>
+              </div>
+                    {% endfor %}
+                  </tbody>    
+                </table>
+                <div>
+                    <p><h5>STORE</h5></p>
+                  </div>
+                  <table id="example" class="table table-striped data-table sqr">
+                    <thead>
+                      <tr>
+                        <th>
+                       <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                       </span>
+                      </th>
+                        <th>NAME</th>
+                        <th>ADDRESS</th>
+                        <th>TELEPHONE</th>
+                        <th>ACTIONS</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for store in stores %}
+                      <tr>
+                        <th>
+                       <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll"></label>
+                       </span>
+                      </th>
+                        <td>{{store.Name}}</td>
+                        <td>{{store.Address}}</td>
+                        <td>{{store.Telephone_Number}}</td>
+                         <td>
+                             <a type="button" class="btn btn-primary" href="#" data-toggle="modal" data-target="#StoreUpdateModal-{{store.id}}" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:50px;">VIEW</a>
+                          <button type="button" class="btn btn-primary dells" data-toggle="modal" data-target="#StoreDeleteModal-{{store.id}}" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:50px;">DELETE</button>
+                        </td>
+                      </tr>
+                  <!-- Modal VIEW-->
+                  <div class="modal fade" id="StoreUpdateModal-{{store.id}}" tabindex="-1" role="dialog" aria-labelledby="newModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+
+                      <div class="modal-content" style="width:500px;">
+                        <div class="modal-header" style="background-color:#d92929 !important;">
+                          <h5 class="modal-title" style="text-indent:center; margin-left: 80px; font-weight:bolder;:">VIEW DETAILS</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="margin-left: 600%;">&times;</span>
+                          </button>
+                        </div>
+                        <form id="updateForm" method="post">
+                        {% csrf_token %}
+                        <div class="modal-body">
+                          <input type="text" name="sstore-id" value = {{store.id}} hidden>
+                          <div class="row">
+                            <div class="col-12" id="startup-tab-1">
+                                <div class = "row" style="margin-bottom:10px;">
+                                  <div class = "col-sm-12">
+                                    <input type="text" class="form-control" id="id-name" placeholder="Name" name="store-name" value ="{{store.Name}}">
+                                  </div>
+                                </div>
+                                <div class = "row" style="margin-bottom:10px;">
+                                <div class = "col-sm-12">
+                                  <input type="text" class="form-control" id="id-address" placeholder="Address"  name="store-address" value ="{{store.Address}}">
+                                </div>
+                              </div>
+                              <div class = "row" style="margin-bottom:10px;">
+                                <div class = "col-sm-12">
+                                  <input type="text" class="form-control" id="id-tnumber" placeholder="Telephone Number"  name="store-tnumber" value ="{{store.Telephone_Number}}">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">  
+                            <button type="submit" id = "btnStoreUpdate" name = "btnStoreUpdate" class="button" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:60px;">UPDATE</button>     
+                            <button type="button" class="button btn-secondary" data-dismiss="modal" style="font-size: 11px; border-color: #d92929 !important; color:#d92929 !important; background: white; padding: 2px; width:60px;">CLOSE</button>                          
+                        </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                      <!-- Modal DELETE-->
+                  <div class="modal fade" id="StoreDeleteModal-{{store.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">DELETE RECORD</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form id="deleteForm" method="post" >
+                        {% csrf_token %} 
+                        <div class="modal-body">                       
+                          <input type="text" name="sstore-id" value = {{store.id}} hidden>
+                          Are you sure you want to delete this record?
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">NO</button>
+                          <button type="submit" id = "btnStoreDelete" name = "btnStoreDelete" class="btn btn-primary">YES</button>
+                        </div>
+                    </form>
+                    </div>
+                  </div>
+              </div>
+                      {% endfor %}
+                    </tbody>    
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Add Modal HTML -->
+ <div id="addModal" class="modal fade fades">
+  <div class="modal-dialog1">
+   <div class="modal-content cnts">
+    <form>
+     <div class="modal-header">      
+      <h4 class="modal-title tts">Add Data</h4>
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="bttns">&times;</button>
+     </div>
+     <div class="modal-body">     
+      <div class="form-group">
+       <a href="/client" class="btn btn-success" data-toggle="modal" id="suc"><i class="material-icons">&#xe147;</i> <span>Add Client</span></a>
+      </div>
+      <div class="form-group">
+       <a href="/orders" class="btn btn-success" data-toggle="modal" id="suc"><i class="material-icons">&#xe147;</i> <span>Add Order</span></a>
+      </div>  
+      <div class="form-group">
+       <a href="/rider" class="btn btn-success" data-toggle="modal" id="suc"><i class="material-icons">&#xe147;</i> <span>Add Rider</span></a>
+      </div>
+      <div class="form-group">
+      <a href="/store" class="btn btn-success" data-toggle="modal" id="suc"><i class="material-icons">&#xe147;</i> <span>Add Store</span></a>
+      </div>     
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+    <script src="{% static './js/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js">
+    </script>
+    <script src="{% static './js/jquery-3.5.1.js' %}"></script>
+    <script src="{% static './js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static './js/dataTables.bootstrap5.min.js' %}"></script>
+    <script src="{% static './js/script.js' %}"></script>
+    <script type="text/javascript">
+          $(document).ready(function()
+          {
+           // Activate tooltip
+           $('[data-toggle="tooltip"]').tooltip();
+           
+           // Select/Deselect checkboxes
+           var checkbox = $('table tbody input[type="checkbox"]');
+           $("#selectAll").click(function()
+           {
+            if(this.checked){
+             checkbox.each(function()
+             {
+              this.checked = true;                        
+             });
+            }
+            else
+            {
+             checkbox.each(function()
+             {
+              this.checked = false;                        
+             });
+            } 
+           });
+           checkbox.click(function()
+           {
+            if(!this.checked)
+            {
+             $("#selectAll").prop("checked", false);
+            }
+           });
+          });
+          </script>
+{% endblock content%}
+
+{% block footerinclude %}
+
+{% endblock footerinclude %}

@@ -1,0 +1,96 @@
+body{
+	overflow-x: hidden;
+    overflow-y: hidden;
+}
+#image{
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    z-index: 999;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.images{
+    width: 200;
+    height: 50;
+    margin-left: 4%;
+}
+/* end navigation */
+		  #img{
+          width: 100%;
+          height: 800px;
+          opacity: 0.6;
+      }
+		.user_card {
+			width: 380px;
+			height: 500px;
+			margin-top: -680px;
+      margin-bottom: auto;
+      background: #ffffff;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 5px;
+		}
+		.lefts{
+			text-indent: 1.5em; 
+			font-family: Arial Black;
+		}
+		.form_container {
+			margin-top: 20px;
+		}
+		#form-title{
+			color: #000000;
+			margin-top: 10px;
+		}
+		.signs{
+			text-indent: 1.5em; 
+			font-family: Arial;
+		}
+		#mbs{
+			width: 300px;
+		}
+				.login_btn {
+			width: 100%;
+      color: #d92929 !important;
+      font-weight: bold !important;
+      border-radius: 3px;
+      border-color: #d92929 !important;;
+		}
+		.input-group-text {
+			background: #f7ba5b !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.linkss{
+			font-family: Arial;
+			font-size: 14px;
+		}
+.f{
+    font-family: Arial;
+    text-indent: 3em;
+    font-size: 11px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+    #mls{
+    	color:red; 
+    	text-decoration: none; 
+    	font-size:14px;
+    	font-weight: bolder;
+    }
+    #mlss{
+    	text-decoration:none; 
+    	color:red;
+    }

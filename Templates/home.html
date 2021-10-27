@@ -1,0 +1,300 @@
+{% load static %}
+{% block content %}
+
+  <title>Homepage</title>
+  <link rel="shortcut icon" type="image/png/jpg" href="{% static 'mysite/favicon/favicon.png '%}">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'css/home.css' %}"/>
+
+<!-- Navigation Bar -->
+    <nav id="image" class="navbar navbar-expand-lg navbar-light fixed-top">
+        <a class="navbar-brand" href="/home">
+          <img class="images" src="{% static 'mysite/images/finallogos.png' %}">
+        </a>
+    <div class="con">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/features">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+      </div>
+    </div>
+      <div class="right">
+       <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Logout</a>
+        </li>
+        <li class="nav-item">
+          <a type="button" class="button button1" id="id_clickme" href="{% url 'dashboardpage'%}">DASHBOARD</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+<!-- End Navigation Bar -->
+
+  <div class="wrapper">
+      <img id="img" src="{% static 'mysite/images/FoodApps.jpg.crdownload' %}">
+    <div class="content">
+        <h1 class="color">Let deliciousness twirl in your mouth.</h1>
+      <div class="fore-box">
+        <form class="example" action="/action_page.php" id="examples">
+          <input type="text" placeholder="Enter your street and house number" name="search" id="myInput">
+          <div class="adjust">
+            <button type="submit" class="btns">Delivery</button>
+            <button type="submit" class="btns">Pick-Up</i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div>
+  <div>
+    <p></p>
+    <h1 class="fonts">Partners</h1>
+    <p class="fontss">You prepare. We delivered. Be our partners</p>
+  </div>
+  <div class="wrapper">
+      <img id="img2" src="{% static 'mysite/images/chief.png' %}">
+    <div class="content">
+        <form class="example" action="/partner" id="examples" >
+          <div class="adjust2">
+            <button type="submit" class="subs" href="/partner">Get Started</button>
+          </div>
+        </form>
+    </div>
+  </div>
+  <div>
+    <p></p>
+    <h1 class="fonts1">Food To Go</h1>
+    <p class="fontss1">Satisfy you hunger with our service</p>
+  </div>
+ <div class="row">
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/piza.jpg' %}" alt="Snow">
+      <div class="bottom-left">Pizza</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/qwek.jpg' %}" alt="Snow">
+      <div class="bottom-left">Quick Bite</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/prk.jpg' %}" alt="Snow">
+      <div class="bottom-left">Pork</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/syan.jpg' %}" alt="Snow">
+      <div class="bottom-left">Asian</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/italia.png' %}" alt="Snow">
+      <div class="bottom-left">Italian</div>
+    </div>
+    <p></p>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/bf.jpg' %}" alt="Snow">
+      <div class="bottom-left">Beef</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/fstfood.jpg' %}" alt="Snow">
+      <div class="bottom-left">Fast Food</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/bkry.jpg' %}" alt="Snow">
+      <div class="bottom-left">Bakery</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/flpino.jpg' %}" alt="Snow">
+      <div class="bottom-left">Filipino</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/cken.jpg' %}" alt="Snow">
+      <div class="bottom-left">Chicken</div>
+    </div>
+    <p></p>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/amrcan.jpg' %}" alt="Snow">
+      <div class="bottom-left">American</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/mlk.jpg' %}" alt="Snow">
+      <div class="bottom-left">Milk Tea</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/japnese.jpg' %}" alt="Snow">
+      <div class="bottom-left">Japanase</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/bvrages.png' %}" alt="Snow">
+      <div class="bottom-left">Beverages</div>
+    </div>
+    <div class="column">
+      <img class="imgss" src="{% static 'mysite/images/chinese.png' %}" alt="Snow">
+      <div class="bottom-left">Chinese</div>
+    </div>
+
+</div>
+  <div>
+    <p></p>
+    <h1 class="fonts2">Cities</h1>
+    <p class="fontss">Find Us Here</p>
+  </div>
+     <div class="team-grid">
+        <div class="container">
+            <div class="row people">
+                <div class="col-md-4 col-lg-3 item">
+                    <div class="box">
+                      <img class="imgss" src="{% static 'mysite/images/cebu.jpg' %}" alt="Snow">
+                        <div class="cover">
+                            <h3 class="name">CEBU</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 item">
+                    <div class="box">
+                         <img class="imgss" src="{% static 'mysite/images/davao.jpg' %}" alt="Snow">
+                        <div class="cover">
+                            <h3 class="name">DAVAO</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 item">
+                    <div class="box">
+                      <img class="imgss" src="{% static 'mysite/images/lapulapu.jpg' %}" alt="Snow">
+                        <div class="cover">
+                            <h3 class="name">LAPULAPU</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 item">
+                    <div class="box">
+                      <img class="imgss" src="{% static 'mysite/images/leyte.jpg' %}" alt="Snow">
+                        <div class="cover">
+                            <h3 class="name">LEYTE</h3>
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <div class="col-md-4 col-lg-3 item">
+                    <div class="box">
+                      <img class="imgss" src="{% static 'mysite/images/makati.jpg' %}" alt="Snow">
+                        <div class="cover">
+                            <h3 class="name">MAKATI</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 item">
+                    <div class="box">
+                      <img class="imgss" src="{% static 'mysite/images/manila.jpg' %}" alt="Snow">
+                        <div class="cover">
+                            <h3 class="name">MANILA</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 item">
+                    <div class="box">
+                      <img class="imgss" src="{% static 'mysite/images/taguig.jpg' %}" alt="Snow">
+                        <div class="cover">
+                            <h3 class="name">TAGUIG</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3 item">
+                    <div class="box">
+                      <a href="/features">
+                      <img class="imgss" src="{% static 'mysite/images/olongapo.jpg' %}" alt="Snow">
+                        <div class="cover">
+                            <h3 class="name">OLONGAPO</h3>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="add">
+  <div>
+    <p class="fontts">Why choose Click To Eat?</p>
+      <ul class="b">
+        <li>You choose click to eat because this app is a very friendly app. This app is very responsive if there is an order</li>
+        <li>Our delivery is very fast and convenient. We prioritize the satisfaction of the customers.</li>
+        <li>Enables users to access a variety of restaurants from their mobile phones.</li>
+        <li>With this app, people don't need to wait in traffic or restaurant queues anymore. Thier food cravings are always just a few clicks away.</li>
+        <li>We deliver the food safely</li>
+      </ul>
+  </div>
+    <div>
+    <p class="fontts">Frequently Asked Questions</p>
+    <div>
+      <p class="foonts">What is Click To Eat?</p>
+      <p></p>
+        <p class="last">Click to Eat is a food delivery app and it caters yummy, delicious, fulfilling foods for everyone. Just like any other food deliveries services, click to eat provides a door to door service of food delivery. Click to eat processes and sends orders directly to partner restaurants, then delivers the meals by delivery riders to the customers. Customers order food by entering their postcodes on the site and browsing for food from a list of restaurants. They can create meals by browsing restaurant menus and selecting items they want to order before entering an address and proceeding to the checkout. Click to eat sends out an SMS to confirm orders and their estimated delivery time. Click to eat  also has a review section on restaurant pages, where customers can comment on sales process, delivery, taste and overall impression of restaurants</p>
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(window).scroll(function(){
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+        });
+    </script>
+
+  </div>
+
+{% endblock content %}    
+
+{% block footerinclude %}
+    <!-- Footer -->
+<hr>
+<div class="footer">
+<div class="footers">
+  <img src="{% static 'mysite/images/finallogos.png' %}" width="150" height="40" class="grayscale">
+  <div class="contain1">
+  <div class="col social">
+    <ul id="ulss" class="grayscale">
+      <li><img class="imgss1" src="{% static 'mysite/images/facebook.png' %}" alt="Snow"></li>
+      <li><img class="imgss1" src="{% static 'mysite/images/instagram.png' %}" alt="Snow"></li>
+      <li><img class="imgss1" src="{% static 'mysite/images/twitter.png' %}" alt="Snow"></li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+<hr>
+<div class="footer">
+<div class="footimgs">
+  &copy; 2021-2022  Click To Eat
+  <p class="ps">Designed by Cueva, Aarold Paul & Orcullo, Mary Alissa</p>
+    <ul class="align" id="menu">
+      <li><a id="dec" href="/about">About</a></li>
+      <li><a id="dec" href="/contact">Contact</a></li>
+      <li><a id="dec" href="/terms" target="_blank">Terms and Conditions</a></li>
+      <li><a id="dec" href="/privacy" target="_blank">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+    <!-- // Footer -->    
+
+{% endblock footerinclude %}               
+
+
